@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quray Potosí — Physics · Computational Materials</title>
+  <meta name="description" content="Interactive CV of Quray Potosí — DFT and machine-learning potentials for 2D materials." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="lattice" aria-hidden="true"></canvas>
+
+  <nav class="nav">
+    <a href="#top" class="brand" id="brand"></a>
+    <button class="nav-toggle" aria-label="Menu" id="navToggle">☰</button>
+    <ul id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#timeline">Timeline</a></li>
+      <li><a href="#publications">Papers</a></li>
+      <li><a href="#documents">Documents</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li class="pal-wrap" id="palWrap">
+        <button id="palBtn" class="theme-btn" aria-label="Color palette">🎨</button>
+        <div class="pal-menu" id="palMenu"></div>
+      </li>
+      <li><button id="themeBtn" class="theme-btn" aria-label="Toggle light/dark">◐</button></li>
+    </ul>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="avatar" id="avatar"></div>
+    <p class="mono kicker" id="kicker"></p>
+    <h1 id="heroName"></h1>
+    <p class="role" id="heroRole"></p>
+    <p class="tagline"><span id="typed"></span><span class="caret">▍</span></p>
+    <div class="hero-actions" id="heroActions"></div>
+    <a href="#about" class="scroll-hint mono">scroll ↓</a>
+  </header>
+
+  <main>
+    <section id="about" class="reveal">
+      <h2><span class="mono num">01</span> About</h2>
+      <div class="about-grid">
+        <div id="aboutText"></div>
+        <div class="stats" id="stats"></div>
+      </div>
+    </section>
+
+    <section id="research" class="reveal">
+      <h2><span class="mono num">02</span> Research</h2>
+      <div class="cards" id="researchCards"></div>
+    </section>
+
+    <section id="timeline" class="reveal">
+      <h2><span class="mono num">03</span> Timeline</h2>
+      <div class="chips" id="timelineFilters"></div>
+      <ol class="timeline" id="timelineList"></ol>
+    </section>
+
+    <section id="publications" class="reveal">
+      <h2><span class="mono num">04</span> Publications</h2>
+      <div id="pubList"></div>
+    </section>
+
+    <section id="documents" class="reveal">
+      <h2><span class="mono num">05</span> Documents</h2>
+      <p class="muted">Certificates, papers, posters and reports — click any card to preview.</p>
+      <div class="doc-tools">
+        <div class="chips" id="docFilters"></div>
+        <input type="search" id="docSearch" placeholder="Search documents…" />
+      </div>
+      <div class="doc-grid" id="docGrid"></div>
+    </section>
+
+    <section id="skills" class="reveal">
+      <h2><span class="mono num">06</span> Skills</h2>
+      <div class="skills" id="skillList"></div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <h2>Let's talk science.</h2>
+    <div class="hero-actions" id="footerLinks"></div>
+    <p class="mono muted small" id="footNote"></p>
+  </footer>
+
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal-box" role="dialog" aria-modal="true">
+      <header>
+        <div>
+          <p class="mono small muted" id="modalMeta"></p>
+          <h3 id="modalTitle"></h3>
+        </div>
+        <div class="modal-actions">
+          <a id="modalOpen" target="_blank" rel="noopener">Open ↗</a>
+          <button id="modalClose" aria-label="Close">✕</button>
+        </div>
+      </header>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="content.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
