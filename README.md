@@ -1,2 +1,2 @@
-# Quray Potosí — Interactive CV
+# Quray Potosí
 Interactive CV
