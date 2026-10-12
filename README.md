@@ -59,3 +59,9 @@ Preview images: a quick way is to screenshot the first page of the PDF and save 
 Five palettes are built in, each with a dark and a light version: `lattice`, `andes`, `aurora`,
 `plasma` and `paper`. Set `palette:` in `content.js`. Visitors can switch with the 🎨 button;
 set `showPalettePicker: false` to hide the button and lock your choice.
+
+## Add a new section
+
+In `content.js`, find `extraSections` and copy one `{ id, title, menu, items: [...] }` block.
+Each new section appears on the page and in the top menu automatically, and sections are
+renumbered for you. No HTML or JavaScript changes needed.

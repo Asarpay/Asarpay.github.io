@@ -138,6 +138,36 @@ window.CV = {
     },
   ],
 
+  /* ------------------------------------------------------------------------
+     EXTRA SECTIONS — add as many as you want. Each one gets its own block on
+     the page and its own link in the menu automatically.
+     Each item: title (required), subtitle, date, text, tags, link (all optional).
+     To add a section: copy one { ... } block, change the id and title, fill items.
+     ------------------------------------------------------------------------ */
+  extraSections: [
+    {
+      id: "training",                  // short, no spaces (used in the URL: #training)
+      title: "Schools & Training",     // section heading
+      menu: "Training",                // name in the top menu (optional)
+      items: [
+        {
+          title: "EPIC IV & EPIC V — Scientific Data Analysis and Machine Learning in Python",
+          subtitle: "ICTP · Grupo de Investigadores Latitud Cero · Physics Without Frontiers (UNESCO)",
+          date: "",
+          text: "Programming schools on scientific data analysis and machine learning with Python.",
+          tags: ["Python", "Machine learning", "Data analysis"],
+        },
+        {
+          title: "Introduction to Quantum Information Science & Engineering",
+          subtitle: "C2QA (USA) · 4-day program",
+          date: "",
+          text: "Hands-on introduction to quantum information, including circuits on IBM Quantum Composer.",
+          tags: ["Quantum computing", "IBM Quantum"],
+        },
+      ],
+    },
+  ],
+
   skills: [
     { group: "Simulation", items: ["VASP (DFT)", "LAMMPS", "RuNNer", "n2p2", "ASE"] },
     { group: "Programming", items: ["Python", "NumPy / Matplotlib", "MPI", "Bash", "Linux"] },

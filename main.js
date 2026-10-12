@@ -206,6 +206,33 @@
   modal.onclick = (e) => e.target === modal && close();
   document.addEventListener("keydown", (e) => e.key === "Escape" && close());
 
+  /* ---------- extra sections (from content.js) ---------- */
+  (D.extraSections || []).forEach((s) => {
+    const sec = document.createElement("section");
+    sec.id = s.id;
+    sec.className = "reveal";
+    sec.innerHTML = `<h2><span class="mono num"></span> ${esc(s.title)}</h2>
+      <div class="cards">${(s.items || [])
+        .map(
+          (it) => `<article class="card">
+            ${it.date ? `<div class="where" style="color:var(--accent)">${esc(it.date)}</div>` : ""}
+            <h3>${esc(it.title)}</h3>
+            ${it.subtitle ? `<div class="where">${esc(it.subtitle)}</div>` : ""}
+            ${it.text ? `<p>${esc(it.text)}</p>` : ""}
+            ${it.tags && it.tags.length ? `<div class="tags">${it.tags.map((t) => `<span class="tag">${esc(t)}</span>`).join("")}</div>` : ""}
+            ${it.link ? `<p style="margin-top:12px"><a href="${esc(it.link)}" target="_blank" rel="noopener">Open ↗</a></p>` : ""}
+          </article>`
+        )
+        .join("")}</div>`;
+    $("#extraSections").before(sec);
+    const li = document.createElement("li");
+    li.innerHTML = `<a href="#${esc(s.id)}">${esc(s.menu || s.title)}</a>`;
+    li.firstChild.onclick = () => $("#navLinks").classList.remove("open");
+    $("#navLinks a[href='#skills']").parentElement.before(li);
+  });
+  // number all sections 01, 02, … in page order
+  document.querySelectorAll("main section h2 .num").forEach((n, k) => (n.textContent = String(k + 1).padStart(2, "0")));
+
   /* ---------- skills ---------- */
   $("#skillList").innerHTML = D.skills
     .map((g) => `<div class="card"><h3>${esc(g.group)}</h3><div class="tags">${g.items.map((s) => `<span class="tag">${esc(s)}</span>`).join("")}</div></div>`)
