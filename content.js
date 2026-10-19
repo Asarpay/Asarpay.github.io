@@ -24,8 +24,8 @@ window.CV = {
   cvPdf: "", // e.g. "files/CV_Quray_Potosi.pdf" — adds a "Download CV" button
 
   links: {
-    email: "you@example.com",           // TODO
-    github: "https://github.com/USERNAME", // TODO
+    email: "quray.potosi@yachaytech.edu.ec",           // TODO
+    github: "https://github.com/Asarpay", // TODO
     linkedin: "",                       // optional
     orcid: "",                          // optional
     scholar: "",                        // optional
