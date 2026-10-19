@@ -190,12 +190,22 @@ window.CV = {
       issuer: "Yachay Tech University",
       file: "",
     },
+      {
+      
+      title: "Computational studies of topological defects on transition-metal dichalcogenide NbS₂ monolayer superlattice",
+      type: "certificate", 
+      date: "2025",
+      issuer: "Natural Science Baltic Conference",
+      file: "files/MB_Potosi.pdf",
+    },
+
+     
     {
       title: "RESOLV Undergraduate Exchange — Research stay",
       type: "certificate",
       date: "2026",
       issuer: "RESOLV · Ruhr University Bochum",
-      file: "",
+      file: "files/UExch-Certificate-2026_Q-A_Potosi_Dumaguala.pdf",
     },
     {
       title: "EPIC IV — Scientific Data Analysis & ML in Python",
@@ -209,21 +219,20 @@ window.CV = {
       type: "certificate",
       date: "",
       issuer: "ICTP · Latitud Cero · Physics Without Frontiers",
-      file: "",
+      file: "files/EPICV-Quray_Asarpay_Potosí_Dumaguala.pdf",
     },
     {
       title: "Introduction to Quantum Information Science & Engineering",
       type: "certificate",
       date: "",
       issuer: "C2QA (USA)",
-      file: "",
+      file: "files/QISE-Quray_Asarpay_Potosí_Dumaguala.pdf",
     },
     {
       title: "Superradiance in the α–attractor potential (IJMPA)",
       type: "paper",
       date: "2026",
       issuer: "Int. J. Mod. Phys. A",
-      file: "",
       link: "https://doi.org/10.1142/S0217751X26501757",
     },
     {
@@ -231,21 +240,21 @@ window.CV = {
       type: "poster",
       date: "2025-05-22",
       issuer: "Nanophysics Day 2025",
-      file: "",
+      file: "files/Quray_Asarpay_Potosi_Dumaguala.pdf",
     },
     {
       title: "HDNNPs for NbS₂ monolayers — internship report",
-      type: "report",
+      type: "certificate",
       date: "2026",
       issuer: "Behler Group, RUB",
-      file: "",
+      file: "files/Internship Confirmation Letter-Potosi.pdf",
     },
     {
       title: "Computational physics projects (MPI, FVM, FFT)",
       type: "report",
       date: "",
       issuer: "Yachay Tech · CEDIA cluster",
-      file: "",
+      
     },
   ],
 };
