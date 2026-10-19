@@ -36,6 +36,39 @@ window.CV = {
     "In 2026 I joined Prof. Jörg Behler's group at Ruhr University Bochum through the RESOLV Undergraduate Exchange Programme, developing HDNNPs for NbS₂ monolayers with flower-like topological defects. I'm looking for PhD opportunities in computational materials science and machine-learning potentials.",
   ],
 
+  /* ------------------------------------------------------------------------
+     AFFILIATIONS — shown under "About".
+     logo / logoDark: image for light / dark mode (leave "" to show the "mark" text badge).
+     url: optional link (group or university page).
+     ------------------------------------------------------------------------ */
+  affiliations: [
+    {
+      name: "CompNano Research Group",
+      role: "Member · Undergraduate researcher (B.Sc. thesis)",
+      place: "Yachay Tech University, Ecuador",
+      lead: "PI: Prof. Dr. Henry Pinto",
+      logo: "files/logos/compnano-logo.png",
+      logoDark: "files/logos/compnano-logo-dark.png",
+      url: "",
+    },
+    {
+      name: "Behler Group — Theoretical Chemistry",
+      role: "Research intern · RESOLV Undergraduate Exchange (2026)",
+      place: "Ruhr University Bochum, Germany",
+      lead: "PI: Prof. Dr. Jörg Behler",
+      mark: "RUB",
+      url: "",
+    },
+    {
+      name: "Yachay Tech University",
+      role: "B.Sc. Physics",
+      place: "Urcuquí, Ecuador",
+      lead: "",
+      mark: "YT",
+      url: "",
+    },
+  ],
+
   stats: [
     { value: "337", label: "DFT structures in my training set" },
     { value: "8", label: "member NNP committee" },

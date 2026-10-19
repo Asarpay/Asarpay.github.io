@@ -101,6 +101,44 @@
     .map((s) => `<div class="card stat"><div class="v" data-to="${esc(s.value)}">0</div><div class="l">${esc(s.label)}</div></div>`)
     .join("");
 
+  /* ---------- affiliations ---------- */
+  if ((D.affiliations || []).length) {
+    $("#affiliations").innerHTML = `<p class="aff-label mono">// affiliations</p><div class="aff-grid">${D.affiliations
+      .map((a) => {
+        const logo = a.logo
+          ? `<img class="aff-logo logo-light" src="${esc(encodeURI(a.logo))}" alt="${esc(a.name)} logo">
+             <img class="aff-logo logo-dark" src="${esc(encodeURI(a.logoDark || a.logo))}" alt="${esc(a.name)} logo">`
+          : `<span class="aff-mark mono">${esc(a.mark || a.name.split(" ").map((w) => w[0]).join("").slice(0, 3))}</span>`;
+        const tag = a.url ? "a" : "div";
+        return `<${tag} class="card aff" ${a.url ? `href="${esc(a.url)}" target="_blank" rel="noopener"` : ""}>
+          <div class="aff-media">${logo}</div>
+          <div class="aff-text">
+            <h3>${esc(a.name)}</h3>
+            <div class="aff-role">${esc(a.role)}</div>
+            <div class="aff-meta">${esc([a.place, a.lead].filter(Boolean).join(" · "))}</div>
+          </div>
+        </${tag}>`;
+      })
+      .join("")}</div>`;
+  }
+  document.head.insertAdjacentHTML("beforeend", `<style>
+    #affiliations { margin-top: 40px; }
+    .aff-label { color: var(--accent); font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 14px; }
+    .aff-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+    .aff { display: flex; gap: 18px; align-items: center; padding: 18px 20px; color: var(--text); }
+    .aff-media { flex: none; width: 76px; height: 84px; display: grid; place-items: center; }
+    .aff-logo { max-width: 100%; max-height: 100%; object-fit: contain; }
+    .aff-mark { width: 64px; height: 64px; border-radius: 16px; display: grid; place-items: center; font-weight: 600; font-size: 1.05rem;
+      color: var(--accent); border: 1px solid color-mix(in srgb, var(--accent) 45%, transparent);
+      background: color-mix(in srgb, var(--accent) 10%, transparent); }
+    .aff h3 { font-size: 1rem; line-height: 1.3; margin-bottom: 3px; }
+    .aff-role { font-size: .85rem; color: var(--accent2); }
+    .aff-meta { font-size: .8rem; color: var(--muted); margin-top: 2px; }
+    .logo-light { display: none; }
+    :root[data-theme="light"] .logo-light { display: block; }
+    :root[data-theme="light"] .logo-dark { display: none; }
+  </style>`);
+
   /* ---------- research ---------- */
   $("#researchCards").innerHTML = D.research
     .map(
