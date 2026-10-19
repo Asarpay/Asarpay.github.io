@@ -33,7 +33,7 @@ window.CV = {
 
   about: [
     "I'm an undergraduate physics student at Yachay Tech University in the CompNano Research Group, supervised by Dr. Henry Pinto. My thesis combines density functional theory (VASP) for electronic properties with high-dimensional neural network potentials (RuNNer / n2p2 + LAMMPS) to reach the large supercells needed for mechanical properties.",
-    "In 2026 I joined Prof. Jörg Behler's group at Ruhr University Bochum through the RESOLV Undergraduate Exchange Programme, developing HDNNPs for NbS₂ monolayers with flower-like topological defects. I'm looking for PhD opportunities in computational materials science and machine-learning potentials.",
+    "From June to August 2026 I did a research internship in Prof. Jörg Behler's group (Theoretical Chemistry II) at Ruhr University Bochum, funded by the Cluster of Excellence RESOLV through its Solvation Scholars Undergraduate Exchange, developing HDNNPs for NbS₂ monolayers with flower-like topological defects. I'm looking for PhD opportunities in computational materials science and machine-learning potentials.",
   ],
 
   /* ------------------------------------------------------------------------
@@ -52,12 +52,12 @@ window.CV = {
       url: "",
     },
     {
-      name: "Behler Group — Theoretical Chemistry",
-      role: "Research intern · RESOLV Undergraduate Exchange (2026)",
-      place: "Ruhr University Bochum, Germany",
+      name: "Behler Group — Theoretical Chemistry II",
+      role: "Research intern · Jun–Aug 2026 · funded by RESOLV",
+      place: "Research Center Chemical Sciences and Sustainability, Ruhr University Bochum, Germany",
       lead: "PI: Prof. Dr. Jörg Behler",
       mark: "RUB",
-      url: "",
+      url: "https://www.theochem2.ruhr-uni-bochum.de/tc/gruppe/behler.html.en",
     },
     {
       name: "Yachay Tech University",
@@ -79,7 +79,7 @@ window.CV = {
   research: [
     {
       title: "HDNNPs for NbS₂ with topological defects",
-      where: "Behler Group · Ruhr University Bochum (RESOLV)",
+      where: "Behler Group (Theoretical Chemistry II) · Ruhr University Bochum · Jun–Aug 2026",
       text:
         "Built and validated high-dimensional neural network potentials for pristine and flower-defect NbS₂ monolayers: dataset curation, hyperparameter sweeps, committee-based active learning, and equation-of-state validation against DFT.",
       tags: ["RuNNer", "LAMMPS", "Active learning", "ASE"],
@@ -110,11 +110,13 @@ window.CV = {
       kind: "talk",
     },
     {
-      date: "2026",
-      title: "Research internship — Behler Group",
-      place: "Ruhr University Bochum, Germany · RESOLV Undergraduate Exchange",
+      date: "Jun–Aug 2026",
+      title: "Research internship — Behler Group (Theoretical Chemistry II)",
+      place: "Ruhr University Bochum, Germany · RESOLV Solvation Scholars Undergraduate Exchange",
       text: "Development of High-Dimensional Neural Network Potentials for Niobium Disulfide Monolayers with Topological Defects.",
       kind: "research",
+      file: "files/Internship Confirmation Letter-Potosi.pdf",
+      fileLabel: "View confirmation letter",
     },
     {
       date: "May 2026",
@@ -299,10 +301,10 @@ window.CV = {
 
      
     {
-      title: "RESOLV Undergraduate Exchange — Research stay",
+      title: "Solvation Scholars Undergraduate Exchange — 2026 Summer Research Programme",
       type: "certificate",
-      date: "2026",
-      issuer: "RESOLV · Ruhr University Bochum",
+      date: "May–Aug 2026",
+      issuer: "Cluster of Excellence RESOLV · Ruhr University Bochum",
       file: "files/UExch-Certificate-2026_Q-A_Potosi_Dumaguala.pdf",
     },
     {
@@ -369,10 +371,10 @@ window.CV = {
       file: "files/Quray_Asarpay_Potosi_Dumaguala.pdf",
     },
     {
-      title: "HDNNPs for NbS₂ monolayers — internship report",
+      title: "Internship Confirmation Letter — Behler Group (Jun–Aug 2026)",
       type: "certificate",
-      date: "2026",
-      issuer: "Behler Group, RUB",
+      date: "Aug 2026",
+      issuer: "Prof. Dr. Jörg Behler · Theoretical Chemistry II, RUB",
       file: "files/Internship Confirmation Letter-Potosi.pdf",
     },
     {

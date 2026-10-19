@@ -4,7 +4,7 @@
   const esc = (s = "") => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 
   // "View certificate" button for timeline / section entries that have a file
-  const viewBtn = (o, label = "View certificate") =>
+  const viewBtn = (o, label = o.fileLabel || "View certificate") =>
     o.file
       ? `<button class="view-doc" data-file="${esc(o.file)}" data-title="${esc(o.title)}" data-meta="${esc([o.date, o.place || o.subtitle].filter(Boolean).join(" · "))}">📄 ${label}</button>`
       : "";
