@@ -52,14 +52,6 @@ window.CV = {
       url: "",
     },
     {
-      name: "Behler Group — Theoretical Chemistry II",
-      role: "Research intern · Jun–Aug 2026 · funded by RESOLV",
-      place: "Research Center Chemical Sciences and Sustainability, Ruhr University Bochum, Germany",
-      lead: "PI: Prof. Dr. Jörg Behler",
-      mark: "RUB",
-      url: "https://www.theochem2.ruhr-uni-bochum.de/tc/gruppe/behler.html.en",
-    },
-    {
       name: "Yachay Tech University",
       role: "B.Sc. Physics",
       place: "Urcuquí, Ecuador",
