@@ -33,10 +33,10 @@ window.CV = {
 
   about: [
     "I'm an undergraduate physics student at Yachay Tech University in the CompNano Research Group, supervised by Dr. Henry Pinto. My thesis combines density functional theory (VASP) for electronic properties with high-dimensional neural network potentials (RuNNer / n2p2 + LAMMPS) to reach the large supercells needed for mechanical properties.",
-    "From June to August 2026 I did a research internship in Prof. Jörg Behler's group (Theoretical Chemistry II) at Ruhr University Bochum, funded by the Cluster of Excellence RESOLV through its Solvation Scholars Undergraduate Exchange, developing HDNNPs for NbS₂ monolayers with flower-like topological defects. I'm looking for PhD opportunities in computational materials science and machine-learning potentials.",
+    "From June to August 2026, I did a research internship in Prof. Jörg Behler's group (Theoretical Chemistry II) at Ruhr University Bochum, funded by the Cluster of Excellence RESOLV through its Solvation Scholars Undergraduate Exchange, developing HDNNPs for NbS₂ monolayers with flower-like topological defects. ",
   ],
 
-  /* ------------------------------------------------------------------------
+  /*------------------------------------------------------------------------
      AFFILIATIONS — shown under "About".
      logo / logoDark: image for light / dark mode (leave "" to show the "mark" text badge).
      url: optional link (group or university page).
@@ -57,7 +57,7 @@ window.CV = {
       place: "Urcuquí, Ecuador",
       lead: "",
       mark: "YT",
-      url: "",
+      url: "https://yachaytech.edu.ec/",
     },
   ],
 
