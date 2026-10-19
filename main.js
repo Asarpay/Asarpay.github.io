@@ -384,6 +384,62 @@
   // number all sections 01, 02, … in page order
   document.querySelectorAll("main section h2 .num").forEach((n, k) => (n.textContent = String(k + 1).padStart(2, "0")));
 
+  /* ---------- languages ---------- */
+  if ((D.languages || []).length) {
+    $("#langList").innerHTML = D.languages
+      .map((l) => `<article class="card lang ${l.featured ? "featured" : ""}">
+        <div class="lang-head">
+          <div class="lang-badge mono">${esc(l.level)}</div>
+          <div>
+            <h3>${esc(l.name)}</h3>
+            <div class="lang-scale">${esc(l.scale || "")}</div>
+          </div>
+          ${l.total ? `<div class="lang-total mono"><span>${esc(l.total)}</span><small>total score</small></div>` : ""}
+        </div>
+        ${l.scores ? `<div class="lang-bars">${l.scores
+          .map((s) => `<div class="lang-bar">
+            <span class="lb-name">${esc(s.skill)}</span>
+            <span class="lb-track"><span class="lb-fill" style="--w:${Math.round((100 * s.score) / s.max)}%"></span></span>
+            <span class="lb-val mono">${s.score}<small>/${s.max}</small></span>
+          </div>`)
+          .join("")}</div>` : ""}
+        ${l.detail ? `<p class="lang-detail">${esc(l.detail)}</p>` : ""}
+        ${viewBtn({ file: l.file, title: `${l.name} — ${l.level} (${l.scale || ""})`, date: "", subtitle: l.detail })}
+      </article>`)
+      .join("");
+  } else {
+    $("#languages")?.remove();
+    $("#navLinks a[href='#languages']")?.parentElement.remove();
+  }
+  document.head.insertAdjacentHTML("beforeend", `<style>
+    .lang-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 18px; align-items: start; }
+    .lang.featured { border-color: color-mix(in srgb, var(--accent) 45%, transparent);
+      background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 10%, var(--card)), var(--card)); }
+    .lang-head { display: flex; align-items: center; gap: 18px; }
+    .lang-badge { flex: none; min-width: 72px; height: 72px; padding: 0 10px; border-radius: 18px; display: grid; place-items: center;
+      font-size: 1.6rem; font-weight: 600; color: var(--on-accent); background: linear-gradient(135deg, var(--accent), var(--accent2)); }
+    .lang:not(.featured) .lang-badge { font-size: .95rem; min-width: 72px; color: var(--accent); background: color-mix(in srgb, var(--accent) 12%, transparent);
+      border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent); }
+    :root[data-theme="light"] .lang.featured .lang-badge { color: #fff; }
+    .lang h3 { font-size: 1.3rem; }
+    .lang-scale { color: var(--accent2); font-size: .9rem; }
+    .lang-total { margin-left: auto; text-align: right; }
+    .lang-total span { display: block; font-size: 1.5rem; font-weight: 600; color: var(--accent); }
+    .lang-total small { color: var(--muted); font-size: .72rem; text-transform: uppercase; letter-spacing: .08em; }
+    .lang-bars { margin-top: 22px; display: grid; gap: 12px; }
+    .lang-bar { display: grid; grid-template-columns: 90px 1fr 56px; align-items: center; gap: 12px; font-size: .9rem; }
+    .lb-name { color: var(--muted); }
+    .lb-track { height: 8px; border-radius: 999px; background: var(--line); overflow: hidden; }
+    .lb-fill { display: block; height: 100%; width: 0; border-radius: inherit; background: linear-gradient(90deg, var(--accent), var(--accent2));
+      transition: width 1.2s cubic-bezier(.2,.8,.2,1); }
+    #languages.visible .lb-fill { width: var(--w); }
+    .lb-val { text-align: right; font-weight: 600; }
+    .lb-val small { color: var(--muted); font-weight: 400; }
+    .lang-detail { color: var(--muted); font-size: .85rem; margin-top: 18px; }
+    @media (max-width: 760px) { .lang-grid { grid-template-columns: 1fr; } .lang-head { flex-wrap: wrap; } .lang-total { margin-left: 0; text-align: left; width: 100%; } }
+    @media (prefers-reduced-motion: reduce) { .lb-fill { width: var(--w); } }
+  </style>`);
+
   /* ---------- skills ---------- */
   $("#skillList").innerHTML = D.skills
     .map((g) => `<div class="card"><h3>${esc(g.group)}</h3><div class="tags">${g.items.map((s) => `<span class="tag">${esc(s)}</span>`).join("")}</div></div>`)

@@ -260,12 +260,38 @@ window.CV = {
     },
   ],
 
+  /* ------------------------------------------------------------------------
+     LANGUAGES — "featured: true" makes the big highlighted card.
+     scores: optional skill bars. file: certificate shown with "View certificate".
+     ------------------------------------------------------------------------ */
+  languages: [
+    {
+      name: "English",
+      level: "C1",
+      scale: "CEFR · Advanced",
+      featured: true,
+      detail: "Certificate of English Language Proficiency — Yachay Tech Language Center (CEFR-aligned proficiency test, May 2026)",
+      scores: [
+        { skill: "Reading", score: 24, max: 30 },
+        { skill: "Speaking", score: 21, max: 30 },
+        { skill: "Writing", score: 24, max: 30 },
+        { skill: "Listening", score: 26, max: 30 },
+      ],
+      total: "95 / 120",
+      file: "files/english-c1-certificate.pdf",
+    },
+    {
+      name: "Spanish",
+      level: "Native",
+      scale: "Mother tongue",
+    },
+  ],
+
   skills: [
     { group: "Simulation", items: ["VASP (DFT)", "LAMMPS", "RuNNer", "n2p2", "ASE"] },
     { group: "Programming", items: ["Python", "NumPy / Matplotlib", "MPI", "Bash", "Linux"] },
     { group: "HPC", items: ["SLURM", "CEDIA cluster", "Jagiellonian Univ. cluster (Cracow)"] },
     { group: "Methods", items: ["ML interatomic potentials", "Active learning", "Equation of state fitting", "Finite volume methods", "FFT solvers", "Langevin dynamics"] },
-    { group: "Languages", items: ["Spanish (native)", "English (C1 · CEFR)"] },
   ],
 
   /* ------------------------------------------------------------------------
