@@ -202,6 +202,7 @@
     poster: { ico: "🖼️", c: "#5eead4" },
     report: { ico: "📊", c: "#60a5fa" },
     language: { ico: "🗣️", c: "#34d399" },
+    talk: { ico: "🎤", c: "#a78bfa" },
     leadership: { ico: "🤝", c: "#f472b6" },
     other: { ico: "📁", c: "#94a3b8" },
   };

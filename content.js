@@ -95,10 +95,10 @@ window.CV = {
   /* Timeline — newest first. Add dates where you know them. */
   timeline: [
     {
-      date: "Oct 2026",
-      title: "Speaker — Yachay Open Science Week 2026",
-      place: "Yachay Tech, Ecuador",
-      text: "Unraveling Flower-like Topological Defects on the NbS₂ Monolayer Superlattices with First-Principles Calculations and Machine Learning.",
+      date: "21 Oct 2026",
+      title: "🎤 Conference talk — Yachay Open Science Week 2026",
+      place: "Speaker · Yachay Tech University, Urcuquí, Ecuador",
+      text: "Presented \"Unraveling Flower-like Topological Defects on the Transition-Metal Dichalcogenide NbS₂ Monolayer Superlattices with First-Principles Calculations and Machine Learning\", covering my thesis work: DFT electronic structure and the HDNNP / molecular dynamics study developed during my internship at Ruhr University Bochum.",
       kind: "talk",
     },
     {
@@ -373,6 +373,13 @@ window.CV = {
       date: "Mar 2022",
       issuer: "Hult Prize Foundation",
       file: "files/HP22-organizing-comm-Quray_Potosí.pdf",
+    },
+    {
+      title: "Talk — Yachay Open Science Week 2026 (YOSW)",
+      type: "talk",
+      date: "21 Oct 2026",
+      issuer: "Yachay Tech University",
+      file: "", // add your certificate or slides here, e.g. "files/YOSW2026.pdf"
     },
     {
       title: "Superradiance in the α–attractor potential (IJMPA)",
